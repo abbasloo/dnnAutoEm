@@ -1,1 +1,1 @@
-
+run python data.py
