@@ -1,9 +1,9 @@
 clear all; 
 clc;
-s1 = loadoff('/home/mabbasloo/Documents/carData3/f005_S2000001_1.off');
+s1 = loadoff('/home/mabbasloo/Documents/carData4/f005_S2000001_1.off');
 [Phi1, Lambda1, A1] = calc_lbo(s1, 100);
 
-s60 = loadoff('/home/mabbasloo/Documents/carData3/f005_S2000001_60.off');
+s60 = loadoff('/home/mabbasloo/Documents/carData4/f005_S2000001_60.off');
 [Phi60, Lambda60, A60] = calc_lbo(s60, 100);
 
 s1_xyz = [s1.X, s1.Y, s1.Z]'; 
