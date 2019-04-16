@@ -2,14 +2,14 @@ clc
 clear all;
 
 nLBO = 500;
-extract_lbo('/home/mabbasloo/Documents/carData4/', '/home/mabbasloo/Documents/carData4/data/lbo', nLBO);
+%extract_lbo('/home/mabbasloo/Documents/carData4/', '/home/mabbasloo/Documents/carData4/data/lbo', nLBO);
 
-extract_xyz('/home/mabbasloo/Documents/carData4/', '/home/mabbasloo/Desktop/Variational-Lstm-Autoencoder/data/');
+%extract_xyz('/home/mabbasloo/Documents/carCrashData/S2000004/', '/home/mabbasloo/Documents/carCrashData/S2000004/data/');
 
 tmp = struct;
-tmp.shape = loadoff('/home/mabbasloo/Documents/carCrashData/S2000004/f001_S2000004_1.off');
+tmp.shape = loadoff('/home/mabbasloo/Documents/carCrashData/S2000004/f001_S2000004_30.off');
 [Phi, Lambda, A] = calc_lbo(tmp.shape, nLBO);
-name = '/home/mabbasloo/Documents/carCrashData/f001_S2000004_1.mat';
+name = '/home/mabbasloo/Documents/carCrashData/f001_S2000004_30.mat';
 parsave(name, Phi, Lambda, A);
 
 function parsave(fn, Phi, Lambda, A)
