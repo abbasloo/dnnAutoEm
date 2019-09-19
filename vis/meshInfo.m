@@ -22,6 +22,14 @@ shape_TRIV = shape.TRIV;
 name = '/home/mabbasloo/Documents/carCrashData/meshInfo_S2000004.mat';
 parsave(name, shape_TRIV);
 
+shape = loadoff('/home/mabbasloo/Documents/Dyna/data/f/50004_punching_0.off');
+shape_TRIV = shape.TRIV;
+name = '/home/mabbasloo/Documents/Dyna/meshInfo_50004_punching.mat';
+parsave(name, shape_TRIV);
+
+clear 
+clc
+
 function parsave(fn, shape_TRIV)
 save(fn, 'shape_TRIV', '-v7.3')
 end
